@@ -16,3 +16,4 @@ namespace BusinessLayer.Abtract
         void AboutUpdate(About about);
     }
 }
+//github deneme
