@@ -112,6 +112,10 @@
     <Compile Include="Migrations\202205051506087_mig_image.designer.cs">
       <DependentUpon>202205051506087_mig_image.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205191428060_mig_admin.cs" />
+    <Compile Include="Migrations\202205191428060_mig_admin.designer.cs">
+      <DependentUpon>202205191428060_mig_admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -155,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205051506087_mig_image.resx">
       <DependentUpon>202205051506087_mig_image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205191428060_mig_admin.resx">
+      <DependentUpon>202205191428060_mig_admin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
