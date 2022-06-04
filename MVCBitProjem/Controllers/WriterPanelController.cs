@@ -63,5 +63,12 @@ namespace MVCBitProjem.Controllers
             hm.HeadingUpdate(p);
             return RedirectToAction("MyHeading");
         }
+        public ActionResult DeleteHeading(int id)
+        {
+            var headingvalue = hm.GetByID(id);
+            headingvalue.HeadingStatus = false;
+            hm.HeadingDelete(headingvalue);
+            return RedirectToAction("MyHeading");
+        }
     }
 }
