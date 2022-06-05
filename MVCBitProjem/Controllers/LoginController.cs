@@ -9,6 +9,7 @@ using System.Web.Security;
 
 namespace MVCBitProjem.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         [HttpGet]
@@ -29,9 +30,29 @@ namespace MVCBitProjem.Controllers
             }
             else
             {
-                RedirectToAction("Index");
+               return RedirectToAction("Index");
             }
+        }
+        [HttpGet]
+        public ActionResult WriterLogin()
+        {
             return View();
+        }
+        [HttpPost]
+        public ActionResult WriterLogin(Writer p)
+        {
+            Context c = new Context();
+            var writeruserinfo = c.Writers.FirstOrDefault(x => x.WriterMail == p.WriterMail && x.WriterPassword == p.WriterPassword);
+            if (writeruserinfo != null)
+            {
+                FormsAuthentication.SetAuthCookie(writeruserinfo.WriterMail, false);
+                Session["WriterMail"] = writeruserinfo.WriterMail;
+                return RedirectToAction("MyContents", "WriterPanelContent");
+            }
+            else
+            {
+                return RedirectToAction("WriterLogin");
+            }
         }
     }
 }
