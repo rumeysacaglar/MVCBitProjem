@@ -52,7 +52,7 @@
                         @foreach (var item in Model)
                         {
                             <li class="nav-item">
-                                <a href="/WriterPanel/MyHeading/Index/" class="nav-link">
+                                <a href="/Default/Headings/@item.HeadingID" class="nav-link">
                                     <p>
                                         @item.HeadingName 
                                     </p>
@@ -68,6 +68,7 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
+            @Html.Action("Index", "Default")
             <div class="content">
 
                 <!-- /.container-fluid -->
@@ -89,5 +90,4 @@
     <script src="~/AdminLTE-3.0.4/dist/js/demo.js"></script>
     <script src="~/AdminLTE-3.0.4/dist/js/pages/dashboard3.js"></script>
 </body>
-</html>
-ar</h1>
+</html> 
