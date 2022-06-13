@@ -81,5 +81,15 @@ namespace MVCBitProjem.Controllers
             hm.HeadingDelete(headingvalue);
             return RedirectToAction("Index");
         }
+        public ActionResult HeadingByWriter(int id)
+        {
+            var headingvalues = hm.GetListByWriter(id);
+            return View(headingvalues);
+        }
+        public ActionResult HeadingByCategory(int id)
+        {
+            var headingvalues = hm.GetListByCategoryID(id);
+            return View(headingvalues);
+        }
     }
 }

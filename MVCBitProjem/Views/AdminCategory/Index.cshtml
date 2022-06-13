@@ -7,7 +7,7 @@
 }
 
 <br />
-<a href="/AdminCategory/AddCategory" class="btn btn-info">Yeni Kategori Ekle</a>
+<a href="/AdminCategory/AddCategory/" class="btn btn-info">Yeni Kategori Ekle</a>
 <br>
 <br />
 <table class="table table-bordered">
@@ -25,8 +25,7 @@
             <td>@item.CategoryName</td>
             <td><a href="/AdminCategory/DeleteCategory/@item.CategoryID" class="btn btn-danger">Sil</a></td>
             <td><a href="/AdminCategory/EditCategory/@item.CategoryID" class="btn btn-warning">Güncelle</a></td>
-            <td><a href="#" class="btn btn-primary">Başlıklar</a></td>
-            
+            <td><a href="/Heading/HeadingByCategory/@item.CategoryID" class="btn btn-primary">Başlıklar</a></td>
         </tr>
     }
 </table>

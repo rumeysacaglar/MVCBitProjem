@@ -29,5 +29,10 @@ namespace MVCBitProjem.Controllers
             var contentvalues = cm.GetListByHeadingID(id);
             return View(contentvalues);
         }
+        public ActionResult ContentByHeadingWriter(int id)
+        {
+            var contentvalues = cm.GetListByHeadingID(id);
+            return View(contentvalues);
+        }
     }
 }

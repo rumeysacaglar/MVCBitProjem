@@ -47,6 +47,7 @@ namespace MVCBitProjem.Controllers
         public ActionResult DeleteCategory(int id)
         {
             var categoryvalue = cm.GetByID(id);
+            categoryvalue.CategoryStatus = false;
             cm.CategoryDelete(categoryvalue);
             return RedirectToAction("Index");
         }

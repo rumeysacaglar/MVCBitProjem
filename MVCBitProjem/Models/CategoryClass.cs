@@ -9,5 +9,7 @@ namespace MVCBitProjem.Models
     {
         public string CategoryName { get; set; }
         public int CategoryCount { get; set; }
+        public string HeadingName { get; set; }
+        public int HeadingCount { get; set; }
     }
 }

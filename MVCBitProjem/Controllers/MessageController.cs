@@ -26,6 +26,16 @@ namespace MVCBitProjem.Controllers
             var messageList = mm.GetListSendbox(p);
             return View(messageList);
         }
+        public ActionResult InboxAdmin()
+        {
+            var messageList = mm.GetListInboxAdmin();
+            return View(messageList);
+        }
+        public ActionResult SendboxAdmin()
+        {
+            var messageList = mm.GetListSendboxAdmin();
+            return View(messageList);
+        }
         public ActionResult GetInboxMessageDetails(int id)
         {
             var value = mm.GetByID(id);

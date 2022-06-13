@@ -26,7 +26,7 @@ namespace BusinessLayer.Concrete
 
         public void CategoryDelete(Category category)
         {
-            _categorydal.Delete(category);
+            _categorydal.Update(category);
         }
 
         public void CategoryUpdate(Category category)

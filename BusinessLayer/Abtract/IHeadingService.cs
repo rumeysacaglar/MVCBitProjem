@@ -11,6 +11,8 @@ namespace BusinessLayer.Abtract
     {
         List<Heading> GetList();
         List<Heading> GetListByWriter(int id);
+        List<Heading> GetListByWriterID(int id);
+        List<Heading> GetListByCategoryID(int id);
         void HeadingAdd(Heading heading);
         Heading GetByID(int id);
         void HeadingDelete(Heading heading);

@@ -1,4 +1,5 @@
-﻿using MVCBitProjem.Models;
+﻿using DataAccessLayer.Concrete;
+using MVCBitProjem.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,9 @@ namespace MVCBitProjem.Controllers
 {
     public class ChartController : Controller
     {
-        // GET: Chart
-        public ActionResult Index()
+        Context c = new Context();
+
+        public ActionResult Index2()
         {
             return View();
         }
@@ -22,28 +24,16 @@ namespace MVCBitProjem.Controllers
 
         public List<CategoryClass> BlogList()
         {
-            List<CategoryClass> ct = new List<CategoryClass>();
-            ct.Add(new CategoryClass()
+            List<CategoryClass> cs2 = new List<CategoryClass>();
+            using (var c = new Context())
             {
-                CategoryName = "Yazılım",
-                CategoryCount = 8
-            });
-            ct.Add(new CategoryClass()
-            {
-                CategoryName = "Gezi",
-                CategoryCount = 4
-            });
-            ct.Add(new CategoryClass()
-            {
-                CategoryName = "Teknoloji",
-                CategoryCount = 7
-            });
-            ct.Add(new CategoryClass()
-            {
-                CategoryName = "Spor",
-                CategoryCount = 1
-            });
-            return ct;
+                cs2 = c.Categories.Select(x => new CategoryClass
+                {
+                    CategoryName = x.CategoryName,
+                    HeadingCount = x.Headings.Count
+                }).ToList();
+            }
+            return cs2;
         }
     }
 }
