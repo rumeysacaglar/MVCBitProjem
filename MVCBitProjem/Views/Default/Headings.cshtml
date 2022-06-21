@@ -48,13 +48,13 @@
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <ul class="nav nav-pills nav-sidebar flex-column" title="" data-widget="treeview" role="menu" data-accordion="false">
                         @foreach (var item in Model)
                         {
                             <li class="nav-item">
                                 <a href="/Default/Headings/@item.HeadingID" class="nav-link">
                                     <p>
-                                        @item.HeadingName 
+                                        @item.HeadingName
                                     </p>
                                 </a>
                             </li>

@@ -3,6 +3,7 @@ using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,9 @@ namespace MVCBitProjem.Controllers
     {
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
         [Authorize(Roles="B")]
-        public ActionResult Index()
+        public ActionResult Index(int p = 1)
         {
-            var categoryvalues = cm.GetList();
+            var categoryvalues = cm.GetList().ToPagedList(p, 10);
             return View(categoryvalues);
         }
         [HttpGet]

@@ -1,4 +1,7 @@
-﻿@model MVCBitProjem.Models.ContactClass
+﻿@using MVCBitProjem.Models;
+@model ViewModel 
+
+
 @{
     Layout = null;
 }
@@ -31,10 +34,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         }
 
     </script>
-    <!-- //Meta tag Keywords -->
-    <!-- Custom-Files -->
-    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-    <script src="~/Scripts/jquery.validate.js"></script>
     <link rel="stylesheet" href="~/AdminLTE-3.0.4/web/css/bootstrap.css">
     <!-- Bootstrap-Core-CSS -->
     <link href="~/AdminLTE-3.0.4/web/css/simpleLightbox.css" rel='stylesheet' type='text/css' />
@@ -224,8 +223,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <div class="card-body">
                                                     <i class="far fa-lightbulb mb-4"></i>
                                                     <h5 class="card-title text-uppercase">TASARIM ARAÇLARI</h5>
-                                                    <p class="card-text">Projenin Front-End tarafında HTML5, CSS, Bootstrap, JavaScript, 
-                                                    JQuery bileşenlerine yer vererek tasarım tarafını gerçekleştirdim.</p>
+                                                    <p class="card-text">
+                                                        Projenin Front-End tarafında HTML5, CSS, Bootstrap, JavaScript,
+                                                        JQuery bileşenlerine yer vererek tasarım tarafını gerçekleştirdim.
+                                                    </p>
                                                 </div>
                                             </div>
 
@@ -235,8 +236,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 <div class="card-body">
                                                     <i class="far fa-clone mb-4"></i>
                                                     <h5 class="card-title text-uppercase">YAZILIM EĞİTİMLERİ</h5>
-                                                    <p class="card-text">Murat Yücedağ YouTube kanalındaki "100 Derste MVC Proje Kampı" 
-                                                    eğitimine kendi yorumlarımı da katarak bitirme tezimi tamamladım.</p>
+                                                    <p class="card-text">
+                                                        Murat Yücedağ YouTube kanalındaki "100 Derste MVC Proje Kampı"
+                                                        eğitimine kendi yorumlarımı da katarak bitirme tezimi tamamladım.
+                                                    </p>
                                                 </div>
                                             </div>
 
@@ -290,72 +293,38 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!--gallery  -->
     <section class="gallery py-md-5 py-3" id="projects">
         <div class="gallery-inner container py-md-5 pb-3">
-            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center">Proje Görselleri</h3>
+            <h3 class="tittle-w3 text-uppercase mb-lg-5 mb-3 text-center">PROJE GÖRSELLERİ</h3>
             <div class="row">
 
                 <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
                     <div class="section_1_gallery_grid">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g1.jpg">
+                        <a title="Kategorilerin gösterildiği sayfa." href="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 18.57.03.jpeg">
                             <div class="section_1_gallery_grid1">
-                                <img src="images/g1.jpg" alt=" " class="img-fluid" />
+                                <img src="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 18.57.03.jpeg" alt=" " class="img-fluid" />
                                 <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
+                                    <h3>KATEGORİLER</h3>
 
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g2.jpg">
+                        <a title="Kategorilere ait başlıkları içeren sayfa." href="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 18.58.19.jpeg">
                             <div class="section_1_gallery_grid1">
-                                <img src="images/g2.jpg" alt=" " class="img-fluid" />
+                                <img src="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 18.58.19.jpeg" alt=" " class="img-fluid" />
                                 <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
+                                    <h3>Başlıklar</h3>
 
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g3.jpg">
+                        <a title="Bütün yazarları listeleyen sayfa." href="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 18.58.48.jpeg">
                             <div class="section_1_gallery_grid1">
-                                <img src="images/g3.jpg" alt=" " class="img-fluid" />
+                                <img src="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 18.58.48.jpeg" alt=" " class="img-fluid" />
                                 <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
-                    <div class="section_1_gallery_grid">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g4.jpg">
-                            <div class="section_1_gallery_grid1">
-                                <img src="images/g4.jpg" alt=" " class="img-fluid" />
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g5.jpg">
-                            <div class="section_1_gallery_grid1">
-                                <img src="images/g5.jpg" alt=" " class="img-fluid" />
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
-
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g6.jpg">
-                            <div class="section_1_gallery_grid1">
-                                <img src="images/g6.jpg" alt=" " class="img-fluid" />
-                                <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
+                                    <h3>Yazarlar</h3>
 
                                 </div>
                             </div>
@@ -364,32 +333,66 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
                     <div class="section_1_gallery_grid">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g7.jpg">
+                        <a title="Hangi kategoride ne kadar başlık olduğunu sayı ve oranla gösteren grafik." href="/AdminLTE-3.0.4/projegorsel/Grafik.jpeg">
                             <div class="section_1_gallery_grid1">
-                                <img src="images/g7.jpg" alt=" " class="img-fluid" />
+                                <img src="/AdminLTE-3.0.4/projegorsel/Grafik.jpeg" alt=" " class="img-fluid" />
                                 <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
+                                    <h3>GRAFİK</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section_1_gallery_grid" data-aos="zoom-in">
+                        <a title="Kategori ve başlık adlarını rapora çeviren sayfa." href="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 19.01.06.jpeg">
+                            <div class="section_1_gallery_grid1">
+                                <img src="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 19.01.06.jpeg" alt=" " class="img-fluid" />
+                                <div class="proj_gallery_grid1_pos">
+                                    <h3>Raporlama SAYFASI</h3>
 
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g8.jpg">
+                        <a title="İletişim sayfası." href="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 19.03.20.jpeg">
                             <div class="section_1_gallery_grid1">
-                                <img src="images/g8.jpg" alt=" " class="img-fluid" />
+                                <img src="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 19.03.20.jpeg" alt=" " class="img-fluid" />
                                 <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
+                                    <h3>İLETİŞİM</h3>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
+                    <div class="section_1_gallery_grid">
+                        <a title="Fotoğraf içeren sayfa." href="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 19.03.50.jpeg">
+                            <div class="section_1_gallery_grid1">
+                                <img src="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 19.03.50.jpeg" alt=" " class="img-fluid" />
+                                <div class="proj_gallery_grid1_pos">
+                                    <h3>GALERİ</h3>
+
                                 </div>
                             </div>
                         </a>
                     </div>
                     <div class="section_1_gallery_grid" data-aos="zoom-in">
-                        <a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="images/g9.jpg">
+                        <a title="Error 404 sayfası." href="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 19.04.13.jpeg">
                             <div class="section_1_gallery_grid1">
-                                <img src="images/g9.jpg" alt=" " class="img-fluid" />
+                                <img src="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 19.04.13.jpeg" alt=" " class="img-fluid" />
                                 <div class="proj_gallery_grid1_pos">
-                                    <h3>Recognize</h3>
+                                    <h3>Hata Sayfası</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section_1_gallery_grid" data-aos="zoom-in">
+                        <a title="Adminleri yetkilendirme sayfası." href="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 19.04.55.jpeg">
+                            <div class="section_1_gallery_grid1">
+                                <img src="/AdminLTE-3.0.4/projegorsel/WhatsApp Image 2022-06-21 at 19.04.55.jpeg" alt=" " class="img-fluid" />
+                                <div class="proj_gallery_grid1_pos">
+                                    <h3>ADMİN YETKİLENDİRME</h3>
 
                                 </div>
                             </div>
@@ -407,33 +410,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <section class="stats py-lg-5 py-4" id="stats">
         <div class="gallery-inner container py-md-5 py-4">
             <div class="row mt-lg-5 stats-con text-white">
-                <div class="col-sm-3 col-6 stats_info counter_grid">
-
-                    <i class="far fa-lightbulb"></i>
-                    <p class="counter">65</p>
-                    <h4>BAŞLIK SAYISI</h4>
-
-                </div>
+                    <div class="col-sm-3 col-6 stats_info counter_grid">
+                        <i class="far fa-lightbulb"></i>
+                        <p class="counter">@Model.HeadingCount</p>
+                        <h4>BAŞLIK SAYISI</h4>
+                    </div>
                 <div class="col-sm-3 col-6 stats_info counter_grid1">
-
                     <i class="far fa-heart"></i>
-                    <p class="counter">1485</p>
+                    <p class="counter">@Model.ContentCount</p>
                     <h4>ENTRY SAYISI</h4>
-
                 </div>
                 <div class="col-sm-3 col-6 stats_info counter_grid">
-
                     <i class="fas fa-magic"></i>
-                    <p class="counter">146</p>
+                    <p class="counter">@Model.WriterCount</p>
                     <h4>YAZAR SAYISI</h4>
-
                 </div>
                 <div class="col-sm-3 col-6 stats_info counter_grid2">
-
                     <i class="far fa-smile"></i>
-                    <p class="counter">345</p>
+                    <p class="counter">@Model.MessageCount</p>
                     <h4>MESAJ SAYISI</h4>
-
                 </div>
             </div>
         </div>
@@ -462,9 +457,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="testimonials_grid text-center">
                             <div class="testimonials_grid-inn text-uppercase">
                                 <i class="fas fa-quote-left"></i>
-                                <p>BU PROJEYİ GELİŞTİRİRKEN GERÇEKTEN ÇOK KEYİF ALDIM. UMARIM SİZLER DE BU PROJEMİ
-                                ÇOK BEĞENİRSİNİZ. YORUMLARINIZ BENİM İÇİN ÇOK ÖNEMLİ. LÜTFEN YORUMLARINIZI 
-                                "İLETİŞİM" KISMINDAN BANA İLETİNİZ.</p>
+                                <p>
+                                    BU PROJEYİ GELİŞTİRİRKEN GERÇEKTEN ÇOK KEYİF ALDIM. UMARIM SİZLER DE BU PROJEMİ
+                                    ÇOK BEĞENİRSİNİZ. YORUMLARINIZ BENİM İÇİN ÇOK ÖNEMLİ. LÜTFEN YORUMLARINIZI
+                                    "İLETİŞİM" KISMINDAN BANA İLETİNİZ.
+                                </p>
                             </div>
 
                         </div>
@@ -473,8 +470,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="testimonials_grid">
                             <div class="testimonials_grid-inn text-uppercase">
                                 <i class="fas fa-quote-left"></i>
-                                <p>BU PROJE, UZUN SÜREDİR AKLIMDA OLAN MVC DÜNYASINA KURUMSAL MİMARİ İLE GİRİŞ
-                                YAPTIĞIM 100 DERSİN SONUNDA ORTAYA ÇIKAN GÜZEL BİR ÜRÜN OLDU.</p>
+                                <p>
+                                    BU PROJE, UZUN SÜREDİR AKLIMDA OLAN MVC DÜNYASINA KURUMSAL MİMARİ İLE GİRİŞ
+                                    YAPTIĞIM 100 DERSİN SONUNDA ORTAYA ÇIKAN GÜZEL BİR ÜRÜN OLDU.
+                                </p>
 
                             </div>
 
@@ -510,7 +509,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </div>
                                 <div class="form-group">
 
-                                    <input class="form-control" type="email" name="Email" placeholder="MAİL ADRESİNİZ" required="">
+                                    <input class="form-control" type="text" name="Email" placeholder="MAİL ADRESİNİZ" required="">
                                 </div>
                                 <div class="form-group">
 
@@ -668,7 +667,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
             </div>
         </div>
-        
+
     </footer>
     <!--//footer-->
     <!--model-forms-->
@@ -812,58 +811,58 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="~/AdminLTE-3.0.4/web/js/jquery.roadmap.js"></script>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
 
             var events = [{
-                    date: 'Oct 2018 - Present',
-                    content: 'Company Name <small>Co-founder, Front-end Designer</small>'
-                },
-                {
-                    date: '2016 - 2018',
-                    content: 'Company Name <small>Senior Visual Designer</small>'
-                },
-                {
-                    date: '2013 - 2016',
-                    content: 'Company Name <small>Mid-level Designer</small>'
-                },
-                {
-                    date: '2012 - 2013',
-                    content: 'Company Name <small>Mid-level Designer</small>'
-                },
-                {
-                    date: '2012 - 2013',
-                    content: 'Company Name <small>Freelance</small>'
-                },
-                {
-                    date: '2011 - 2012',
-                    content: 'San Diego university  <small>For Design</small>'
-                },
-                {
-                    date: '2010 - 2011',
-                    content: 'New York university  <small>For Graphic Design</small>'
-                },
+                date: 'Oct 2018 - Present',
+                content: 'Company Name <small>Co-founder, Front-end Designer</small>'
+            },
+            {
+                date: '2016 - 2018',
+                content: 'Company Name <small>Senior Visual Designer</small>'
+            },
+            {
+                date: '2013 - 2016',
+                content: 'Company Name <small>Mid-level Designer</small>'
+            },
+            {
+                date: '2012 - 2013',
+                content: 'Company Name <small>Mid-level Designer</small>'
+            },
+            {
+                date: '2012 - 2013',
+                content: 'Company Name <small>Freelance</small>'
+            },
+            {
+                date: '2011 - 2012',
+                content: 'San Diego university  <small>For Design</small>'
+            },
+            {
+                date: '2010 - 2011',
+                content: 'New York university  <small>For Graphic Design</small>'
+            },
 
-                {
-                    date: '2009 - 2010',
-                    content: 'New York university  <small>For Graphic Design</small>'
-                },
+            {
+                date: '2009 - 2010',
+                content: 'New York university  <small>For Graphic Design</small>'
+            },
 
-                {
-                    date: '2008 - 2009',
-                    content: 'New York university  <small>For Graphic Design</small>'
-                },
-                {
-                    date: '2005 - 2008',
-                    content: 'Lorem Ipsum  <small>Add Description</small>'
-                },
-                {
-                    date: '2003 - 2005',
-                    content: 'Lorem IPsum  <small>Add Description</small>'
-                },
-                {
-                    date: '2001 - 2003',
-                    content: 'Lorem IPsum  <small>Add Description</small>'
-                }
+            {
+                date: '2008 - 2009',
+                content: 'New York university  <small>For Graphic Design</small>'
+            },
+            {
+                date: '2005 - 2008',
+                content: 'Lorem Ipsum  <small>Add Description</small>'
+            },
+            {
+                date: '2003 - 2005',
+                content: 'Lorem IPsum  <small>Add Description</small>'
+            },
+            {
+                date: '2001 - 2003',
+                content: 'Lorem IPsum  <small>Add Description</small>'
+            }
             ];
 
             $('#my-timeline').roadmap(events, {
@@ -894,8 +893,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="~/AdminLTE-3.0.4/web/js/move-top.js"></script>
     <script src="~/AdminLTE-3.0.4/web/js/easing.js"></script>
     <script>
-        jQuery(document).ready(function($) {
-            $(".scroll").click(function(event) {
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
                 event.preventDefault();
                 $('html,body').animate({
                     scrollTop: $(this.hash).offset().top
@@ -905,15 +904,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     </script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             /*
-            						var defaults = {
-            							  containerID: 'toTop', // fading element id
-            							containerHoverID: 'toTopHover', // fading element hover id
-            							scrollSpeed: 1200,
-            							easingType: 'linear'
-            						 };
-            						*/
+                                    var defaults = {
+                                          containerID: 'toTop', // fading element id
+                                        containerHoverID: 'toTopHover', // fading element hover id
+                                        scrollSpeed: 1200,
+                                        easingType: 'linear'
+                                     };
+                                    */
 
             $().UItoTop({
                 easingType: 'easeOutQuart'

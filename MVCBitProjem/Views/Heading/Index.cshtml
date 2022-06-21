@@ -1,5 +1,8 @@
 ﻿@using EntityLayer.Concrete
-@model List<Heading>
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<Heading>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -81,6 +84,34 @@
                             {
                                 color = "badge badge-dark";
                             }
+                            if (item.Category.CategoryName == "Eğitim")
+                            {
+                                color = "badge badge-info";
+                            }
+                            if (item.Category.CategoryName == "Ekonomi")
+                            {
+                                color = "badge badge-warning";
+                            }
+                            if (item.Category.CategoryName == "Teknoloji")
+                            {
+                                color = "badge badge-info";
+                            }
+                            if (item.Category.CategoryName == "Politika")
+                            {
+                                color = "badge badge-secondary";
+                            }
+                            if (item.Category.CategoryName == "Yemek")
+                            {
+                                color = "badge badge-info";
+                            }
+                            if (item.Category.CategoryName == "Tarih")
+                            {
+                                color = "badge badge-light";
+                            }
+                            if (item.Category.CategoryName == "Sağlık")
+                            {
+                                color = "badge badge-info";
+                            }
                             <tr>
                                 <td>
                                     @item.HeadingID
@@ -134,3 +165,8 @@
     </section>
 </body>
 </html>
+@Html.PagedListPager((IPagedList)Model, p => Url.Action("Index", new { p }), new PagedListRenderOptions
+{
+    LiElementClasses = new List<string>
+    { "page-link"}
+})

@@ -12,8 +12,6 @@
         <th>#</th>
         <th>Kullanıcı Mail</th>
         <th>Yetki</th>
-        <th>Status</th>
-        <th>Pasif Yap</th>
         <th>Yetkisini Değiştir</th>
     </tr>
     @foreach (var item in Model)
@@ -22,8 +20,6 @@
             <th>@item.AdminID</th>
             <td>@item.AdminUsername</td>
             <td>@item.AdminRole</td>
-            <td>Aktif</td>
-            <td><a href="/AdminCategory/DeleteCategory/@item.AdminID" class="btn btn-danger">Pasif Yap</a></td>
             <td><a href="/Authorization/EditAdmin/@item.AdminID" class="btn btn-warning">Yetkisini Değişir</a></td>
 
         </tr>
