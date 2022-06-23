@@ -30,7 +30,7 @@ namespace MVCBitProjem.Controllers
 
             return View();
         }
-
+        [AllowAnonymous]
         [HttpGet]
         public ActionResult Contact()
         {
@@ -48,32 +48,6 @@ namespace MVCBitProjem.Controllers
             cm.ContactAdd(c);
             return RedirectToAction("HomePage");
         }
-
-        //public IActionResult WriterAdd(AddWriterImgDto dto) // model kullan +
-        //{
-
-        //    Writer w = new Writer();
-        //    if (dto.Image != null)
-        //    {
-        //        var extension = Path.GetExtension(dto.Image.FileName);
-        //        var newImageName = Guid.NewGuid() + extension;
-        //        var location = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/WriterImageFiles/", newImageName);
-        //        var stream = new FileStream(location, FileMode.Create);
-        //        dto.Image.CopyTo(stream);
-        //        w.Image = newImageName;
-
-        //    }
-        //    w.Mail = dto.Mail;
-        //    w.Name = dto.Name;
-        //    w.Password = dto.Password;
-        //    w.About = dto.About;
-        //    w.Phone = dto.Phone;
-        //    w.City = dto.City;
-        //    w.Gender = dto.Gender;
-        //    w.Status = true;
-        //    wm.TAdd(w);
-        //    return RedirectToAction("Index", "Dashboard");
-        //}
 
         [AllowAnonymous]
         public ActionResult HomePage()
